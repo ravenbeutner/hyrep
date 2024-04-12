@@ -1,0 +1,6 @@
+bin/
+obj/
+*.smt2 
+*.sl
+*.hoa
+*.txt

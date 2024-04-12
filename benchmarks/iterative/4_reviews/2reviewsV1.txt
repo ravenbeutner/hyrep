@@ -1,0 +1,44 @@
+[program]
+int main(int reviewerAid, int reviewerBid, string ContentOfA, string ContentOfB)
+{
+    // VARS
+    int order;
+    string notification;
+    string HeaderOfA;
+    string HeaderOfB;
+    
+    // INIT
+    HeaderOfA = "===1st Review===";
+    HeaderOfB = "===2nd Review===";
+    order = (reviewerAid - reviewerBid);
+    notification = "your reviews:";
+
+    observe;
+    if (reviewerAid <= reviewerBid){
+        order = 1;
+        notification = notification str.++ HeaderOfA;
+        notification = notification str.++ HeaderOfB;
+    }
+    else {
+        order = 2;
+        notification = notification str.++ HeaderOfB;
+        notification = notification str.++ HeaderOfA;
+    }
+
+
+    @ {notification} notification = notification;
+    @ {order} order = order; 
+
+    observe;
+    return 0;
+}
+
+[iter]
+3
+
+[formula]
+forall pi. forall pii. 
+{(0 < reviewerAid_pi) & (0 < reviewerAid_pii) & (0 < reviewerBid_pi) & (0 < reviewerBid_pii) & (reviewerAid_pi = reviewerAid_pii)} -> X {(notification_pi = notification_pii) & (order_pi = order_pii)} 
+
+[outputs]
+order

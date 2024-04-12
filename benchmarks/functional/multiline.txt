@@ -1,0 +1,33 @@
+[program]
+void main(int n) {
+    int ret1;
+    int ret2;
+
+    ret1 = -1;
+    ret2 = -1;
+    
+    observe;
+
+    @{l1} if (n > 0) {
+        ret1 = n;
+    }
+
+    @{l2} if (n > 10) {
+        ret2 = n;
+    }
+
+    observe;
+}
+
+[formula]
+forall pi.  
+    ({n_pi = -2} -> X {ret1_pi = -1 & ret2_pi = -1}) & 
+    ({n_pi = 0} -> X {ret1_pi = 0 & ret2_pi = -1}) &
+    ({n_pi = 1} -> X {ret1_pi = 1 & ret2_pi = -1}) &
+    ({n_pi = 10} -> X {ret1_pi = 10 & ret2_pi = 10}) &
+    ({n_pi = 11} -> X {ret1_pi = 11 & ret2_pi = 11})
+
+[outputs]
+ret1
+ret2
+

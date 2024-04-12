@@ -1,0 +1,24 @@
+[program]
+void main(int a, int b) {
+    bool cond;
+    int ret;
+    
+    observe;
+
+    @ if (a >= (b+1)) {
+        ret = 0;
+    } else {
+        ret = 1;
+    }
+
+    observe;
+}
+
+[formula]
+forall pi.  ({a_pi = 1 & b_pi = 1} -> X {ret_pi = 0}) & ({a_pi = 2 & b_pi = 1} -> X {ret_pi = 1}) & ({a_pi = 1 & b_pi = 2} -> X {ret_pi = 0}) & ({a_pi = 3 & b_pi = 0} -> X {ret_pi = 0}) & ({a_pi = 5 & b_pi = 0} -> X {ret_pi = 0}) & ({a_pi = 5 & b_pi = 5} -> X {ret_pi = 0}) & ({a_pi = 4 & b_pi = 5} -> X {ret_pi = 1})
+
+[depth]
+20
+
+[outputs]
+ret 

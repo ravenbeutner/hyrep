@@ -1,0 +1,23 @@
+[program]
+void main(int a, int b) {
+    bool cond;
+    int ret;
+    
+    observe;
+
+    @ cond = a > b;
+
+    if (cond) {
+        ret = 2147483647;
+    } else {
+        ret = 1;
+    }
+
+    observe;
+}
+
+[formula]
+forall pi.  ({a_pi = 1 & b_pi = 2} -> X {ret_pi = 1}) & ({a_pi = 2 & b_pi = 2} -> X {ret_pi = 2147483647}) & ({a_pi = 2 & b_pi = 1} -> X {ret_pi = 2147483647})
+
+[outputs]
+cond 

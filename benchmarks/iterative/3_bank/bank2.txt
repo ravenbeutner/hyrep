@@ -1,0 +1,49 @@
+[program]
+int main(string password, string param1) {
+    string  data;
+    string  loginfo;
+    string  match;
+    bool    loginsuccess;
+    string  username;
+    string  date;
+    string  identity;
+
+    loginsuccess= false;
+    match       = "MyPassword";
+    username    = "user";
+    date        = "today";
+    loginfo     = "(empty)";
+    identity    = "normal user";
+
+    data = date;
+    data = data str.++ username;
+    data = data str.++ identity;
+    data = data str.++ password;
+    
+    if(password == match){
+        loginsuccess = true;
+    } else {
+        loginsuccess = false;
+    }
+
+    @ loginfo = data; // get log from inputs
+    observe;
+    
+    if (loginsuccess == true) {
+        loginfo = loginfo str.++ "successful login";
+    } else {
+        loginfo = loginfo;
+    }
+
+    observe;
+    return 0;
+}
+
+[formula]
+forall pi. forall pii. {loginfo_pi = loginfo_pii}
+
+[outputs]
+loginfo
+
+[iter]
+1

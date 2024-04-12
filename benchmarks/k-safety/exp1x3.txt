@@ -1,0 +1,32 @@
+[program]
+
+void main(int n, bool b) {
+    int t;
+    int x;
+
+    observe;
+
+    if (b) {
+        x = 0;
+        while (x < n) {
+            x = x + x;
+        }
+    } else {
+        @ x = 1;
+        while (x < n) {
+            t = x;
+            x = x + t;
+        }
+    }
+
+    observe;
+}
+
+
+[formula]
+forall pi. forall pii.  {n_pi = n_pii} -> X {x_pi = x_pii}
+
+[depth]
+10
+
+[outputs]

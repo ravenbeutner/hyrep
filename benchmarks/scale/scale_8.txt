@@ -1,0 +1,28 @@
+[program]
+void main(bool x0, bool x1, bool x2, bool x3, bool x4, bool x5, bool x6, bool x7, bool secret){ 
+    bool res;
+    observe;
+
+    res = true;
+    res = res && secret;
+    res = res && x0;
+    res = res && x1;
+    res = res && x2;
+    res = res && x3;
+    res = res && x4;
+    res = res && x5;
+    res = res && x6;
+    res = res && x7;
+    @ res = res;
+
+    observe;
+}
+
+[formula]
+forall pi. forall pii. ({x0_pi = x0_pii} & {x1_pi = x1_pii} & {x2_pi = x2_pii} & {x3_pi = x3_pii} & {x4_pi = x4_pii} & {x5_pi = x5_pii} & {x6_pi = x6_pii} & {x7_pi = x7_pii}) -> X {res_pi = res_pii}
+
+[outputs]
+res
+
+[iter]
+2

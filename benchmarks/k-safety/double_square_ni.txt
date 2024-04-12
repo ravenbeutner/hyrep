@@ -1,0 +1,39 @@
+[program]
+void main(int x, bool b) {
+    int y;
+    int z;
+
+    observe;
+
+    if(b) {
+        y = 0;
+        z = 2 * x;
+
+        while (z > 0) {
+            z = z - 1;
+            y = y + x;
+        }
+
+    } else {
+        @ y = 1;
+        z = x;
+
+        while (z > 0) {
+            z = z - 1;
+            y = y + x;
+        }
+
+        y = 2 * y;
+    }
+
+    observe;
+}
+
+
+[formula]
+forall pi. forall pii.  {x_pi = x_pii} -> X {y_pi = y_pii}
+
+[depth]
+20
+
+[outputs]

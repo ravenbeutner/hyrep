@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Util.fs" />
+    <Compile Include="Configuration.fs" />
+    <Compile Include="SMT.fs" />
+    <Compile Include="SMTUtil.fs" />
+    <Compile Include="Statement.fs" />
+    <Compile Include="HyperLTL.fs" />
+    <Compile Include="SymbolicExecution.fs" />
+    <Compile Include="Grammar.fs" />
+    <Compile Include="SyGuS.fs" />
+    <Compile Include="InputInstance.fs" />
+    <Compile Include="Verify.fs" />
+    <Compile Include="Repair.fs" />
+    <Compile Include="TransparentRepair.fs" />
+    <Compile Include="IterativeRepair.fs" />
+    <Compile Include="CommandLineParser.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FsOmegaLib\FsOmegaLib.fsproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FParsec" Version="2.0.0-beta2" />
+  </ItemGroup>
+  <PropertyGroup>
+    <OtherFlags>$(OtherFlags) --warnon:1182</OtherFlags>
+  </PropertyGroup>
+</Project>

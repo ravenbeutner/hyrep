@@ -1,0 +1,27 @@
+[program]
+int main(int decision, bool phase, string title, string session) {
+    string print;
+    string t;
+    int dec;
+
+    t = title;
+    @ dec = decision;
+    if (dec == 1) {
+        print = t str.++ session;
+    } 
+    else {
+        print = t;
+    }
+    observe;
+    return 0;
+}
+
+
+[formula]
+forall pi. forall pii. (!{phase_pi} & !{phase_pii} & {title_pi = title_pii}) -> ({print_pi = print_pii}) 
+
+[outputs]
+dec
+
+[iter]
+2

@@ -1,0 +1,20 @@
+[program]
+void main(int n) {
+    int ret;
+
+    ret = 0;
+    
+    observe;
+
+    @ if (true) {
+        ret = n + 1;
+    }
+
+    observe;
+}
+
+[formula]
+forall pi.  ({n_pi = 0} -> X {ret_pi = 0}) & ({n_pi = 1} -> X {ret_pi = 2}) & ({n_pi = 2} -> X {ret_pi = 3})
+
+[outputs]
+ret

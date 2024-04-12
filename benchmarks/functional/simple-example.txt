@@ -1,0 +1,20 @@
+[program]
+void main(int a, int b) {
+    bool cond;
+    int ret;
+    
+    observe;
+
+    @ ret = a + b + 1;
+
+    observe;
+}
+
+[formula]
+forall pi.  ({a_pi = 1 & b_pi = 2} -> X {ret_pi = 4}) & ({a_pi = 2 & b_pi = 2} -> X {ret_pi = 5}) & ({a_pi = 2 & b_pi = 1} -> X {ret_pi = 3})
+
+[depth]
+20
+
+[outputs]
+ret 
