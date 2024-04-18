@@ -1,3 +1,8 @@
+/*
+An insecure banking system that leaks the user password to log
+Code adapted from adapted from: https://github.com/dineshshetty/Android-InsecureBankv2
+Expected repair: do not attack user credentials to public observable log
+*/
 [program]
 int main(string password, string username, string date,
             int serverip, string serverport) {

@@ -1,3 +1,8 @@
+/*
+An ATM machine that leaks the user `balance` to `ErrorLog`
+Code adapted from IFSpec suite: www.spp-rs3.de/IFSpec (in "ScenarioBanking") 
+Expected repair:  do not output ErrorLog if (amount > balance)
+*/
 [program]
 int main(int amount, int balance)
 {

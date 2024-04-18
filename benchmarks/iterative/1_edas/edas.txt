@@ -1,3 +1,8 @@
+/*
+A journal management system that leaks the decisions before the review session ended.
+Code adapted from paper: https://doi.org/10.1109/CSF.2016.24
+Expected repair: do not leak the decision information untill the review session has ended.
+*/
 [program]
 int main(int decision, bool phase, string title, string session) {
     string print;

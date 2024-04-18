@@ -1,3 +1,8 @@
+/*
+An paper review system that leansk the chair identity (id==1) in the content
+Code adapted from IFSpec suite: www.spp-rs3.de/IFSpec (in "ReviewerAnonymity") 
+Expected repair:  do not order reviewers in accending order of id numbers
+*/
 [program]
 int main(int reviewerAid, int reviewerBid, int reviewerCid, string ContentOfA, string ContentOfB)
 {

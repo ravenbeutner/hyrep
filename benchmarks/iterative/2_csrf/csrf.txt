@@ -1,3 +1,8 @@
+/*
+A web attack that leaks user credential to the attacker via browser cookies which causes unsafe hiddenrequest.
+Code adapted from adapted from example in paper: https://link.springer.com/chapter/10.1007/978-3-319-13841-1_6 
+Expected repair: do not allow any request if the user credintial (i.e., after a successful login) happened.
+*/
 [program]
 int main(int password, int act1, string act2, bool attack) {
     int browser;
