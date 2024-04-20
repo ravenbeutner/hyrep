@@ -32,6 +32,8 @@ Download and build _spot_ (details can be found [here](https://spot.lrde.epita.f
 Clone and build _cvc5_ (details can be found [here](https://cvc5.github.io/)). 
 You can place the _spot_ and _cvc5_ executables in any location of your choosing, and provide HyRep with the _absolute_ path (see details below).
 
+The results in [1] were obtained with spot version 2.11.6 and cvc5 version 1.0.8.
+
 ### Build HyRep
 
 To build HyRep run the following (when in the main directory of this repository).
