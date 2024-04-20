@@ -1,3 +1,7 @@
+/*
+Repair instance adapted from https://doi.org/10.1145/2884781.2884807 and https://doi.org/10.1109/ ICSE.2012.6227211 
+*/
+
 [program]
 void main(int a, int b) {
     bool cond;
@@ -20,5 +24,4 @@ forall pi.  ({a_pi = 1 & b_pi = 1} -> X {ret_pi = 0}) & ({a_pi = 2 & b_pi = 1} -
 [depth]
 20
 
-[outputs]
-ret 
+[outputs] 

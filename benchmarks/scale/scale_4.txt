@@ -1,3 +1,7 @@
+/*
+Scalable repair instance. For parameter n, the final result should only depend on x_0, x_1, ...., x_{n-1} but not on secret. 
+*/
+
 [program]
 void main(bool x0, bool x1, bool x2, bool x3, bool secret){ 
     bool res;

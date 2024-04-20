@@ -1,3 +1,9 @@
+/*
+Code adapted from paper: https://doi.org/10.1007/978-3-031-13185-1\_17
+Link: https://github.com/hypa-tool/hypa/tree/main/benchmarks/ksafety/double_square_ni
+*/
+
+
 [program]
 void main(int x, bool b) {
     int y;
@@ -15,8 +21,8 @@ void main(int x, bool b) {
         }
 
     } else {
-        @ y = 1;
-        z = x;
+        y = 0;
+        @ z = x;
 
         while (z > 0) {
             z = z - 1;
